@@ -3,10 +3,11 @@ import { Controller } from 'react-hook-form'
 import { FormFields, useMyForm } from './useForm'
 
 const BasicForm: FC = () => {
-  const { handleSubmit, errors, control } = useMyForm()
+  const { handleSubmit, errors, control, reset } = useMyForm()
 
   const onSubmit = handleSubmit(async (formData: FormFields) => {
     console.log('FormData: ', formData)
+    reset()
   })
 
   return (
