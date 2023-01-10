@@ -1,0 +1,108 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Node artifact files
+node_modules
+dist
+dist-ssr
+*.local
+
+# Compiled Java class files
+*.class
+
+# Compiled Python bytecode
+*.py[cod]
+
+# dependencies
+/.pnp
+.pnp.js
+
+# Tests
+/coverage
+/.nyc_output
+
+# next.js
+/.next/
+/out/
+/.swc/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# production
+/build
+
+# Log files
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Package files
+*.jar
+
+# Maven
+target/
+
+# IDEs and editors
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# VSCode IDE
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Unit test reports
+TEST*.xml
+
+# misc
+*.pem
+
+# Applications
+*.app
+*.exe
+*.war
+
+# env
+.env.local
+.env.development.local
+.env.development
+.env.test.local
+.env.test
+.env.production.local
+.env.production
+.env
+.env*.local
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+# Editor directories and files
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vercel
+
+# Docker
+docker-compose.yml
