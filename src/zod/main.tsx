@@ -1,6 +1,7 @@
 /*
     Copy and Find:
         Basic types
+        superRefine
         Schema .passthrough(), .strict()
         Array & Tuple
         Union, Discriminated Union
@@ -9,6 +10,8 @@
         Map Type
         Set Type
         Promise Type
+        Advance validation
+        Error handling
 */
 
 import { z } from 'zod'
@@ -86,6 +89,27 @@ console.log('Log-5: safeParse', UserSchema2.safeParse(user3)) // Success
 console.log('Log-6: safeParse', UserSchema2.shape) // Type of all the keys inside schema
 console.log('Log-7: safeParse', UserSchema2.shape.age) // Type of specified key inside schema
 console.log('Log-8: safeParse', UserSchema2.partial().safeParse(user)) // Success: All of the keys are optional
+
+// superRefine
+
+export const registerUserSchema = z.object({
+    firstName: z.string(),
+    lastName: z.string(),
+    userName: z.string(),
+    email: z.string().email(),
+    phone: z.string().transform(data => Number(data)),
+    password: z.string().min(4),
+    confirmPassword: z.string().min(4),
+    avatar: z.string().optional(),
+    isVerified: z.boolean().optional()
+}).superRefine(({ confirmPassword, password }, ctx) => {
+  if (confirmPassword !== password) {
+    ctx.addIssue({
+      code: "custom",
+      message: "The passwords did not match"
+    });
+  }
+});
 
 // Schema .passthrough(), .strict()
 
