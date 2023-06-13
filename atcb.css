@@ -18,25 +18,19 @@
  */
 
 :host {
-  width: fit-content;
 
   --base-font-size-l: 16px;
   --base-font-size-m: 16px;
   --base-font-size-s: 16px;
   --font: arial, helvetica, sans-serif;
   --keyboard-focus: #1e90ff;
-  --btn-background: #f5f5f5;
-  --btn-background-hover: #fff;
-  --btn-border: #d2d2d2;
-  --btn-text: #333;
-  --btn-text-hover: #000;
+  --btn-background: #BDFF3B; --btn-border: #BDFF3B; --btn-text: #000; --btn-background-hover: #B2F234; --list-background: #EDEDED; --list-background-hover: #121212; --list-text-hover: #fff; width: 100%;
   --btn-shadow: rgba(0 0 0 / 20%) 2px 5px 18px -1px, rgba(0 0 0 / 15%) 2px 2px 10px -3px;
   --btn-shadow-hover: rgba(0 0 0 / 35%) 2px 5px 18px -1px, rgba(0 0 0 / 30%) 2px 2px 10px -3px;
   --btn-shadow-active: rgba(0 0 0 / 50%) 2px 5px 18px -1px, rgba(0 0 0 / 45%) 2px 2px 10px -3px;
   --list-background: #f5f5f5;
   --list-background-hover: #fff;
-  --list-text: #333;
-  --list-text-hover: #000;
+  --list-text: #121212;
   --list-close-background: #e5e5e5;
   --list-close-text: #777;
   --list-shadow: rgba(0 0 0 / 20%) 2px 5px 18px -1px, rgba(0 0 0 / 40%) 2px 2px 10px -3px;
@@ -151,6 +145,7 @@
   display: block;
   padding: 5px;
   position: relative;
+  width: 100%;
 }
 
 .atcb-button {
@@ -177,7 +172,7 @@
   user-select: none;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  width: auto;
+  width: 100%;
   z-index: 1;
 }
 
